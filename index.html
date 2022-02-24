@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+
+    <h2>ベースのサンプル</h2>
+    <p>星をクリックするとパーティクルを表示します。ちょっと寂しいですね</p>
+    <div id="stage1" class="stage">
+      <div class="center">
+        <div class="star"></div>
+      </div>
+    </div>
+
+    <h2>やりがち例1: とにかく数を増やす ＆ ランダムにする</h2>
+    <p>
+      ひとまず数を増やしてみました。また、数が多いとパーティクル同士がくっついてしまうので、色や位置をランダムにしています。<br>
+      数を増やしてランダムにするのは手軽でそれなりに効果的な方法ではありますが、いたずらに数ばかり増やしても見た目がうるさくなるだけで
+      効果的な演出にならないことも多いので注意が必要です。
+    </p>
+    <div id="stage2" class="stage">
+      <div class="center">
+        <div class="star"></div>
+      </div>
+    </div>
+
+    <h2>やりがち例2: 透明度やブラー、合成モードで派手さを足す</h2>
+    <p>
+      半透明やブラーといった効果は豪華さの演出には効果的な手段ですが、上手く使うのは簡単ではありません。
+      これらの効果は要素の視覚的なメリハリを減らしてしまうため、思ったほど華やかにならないことが多い上、
+      要素を増やすとパフォーマンスに影響する可能性も高くなります。
+    </p>
+    <div id="stage3" class="stage">
+      <div class="center">
+        <div class="star"></div>
+      </div>
+    </div>
+
+    <h2>工夫例1:少ない要素で動きにメリハリをつける</h2>
+    <p>
+      少ない要素数でも予備動作（溜めや余韻）を効果的に使うことでスピード感や質量感のある演出になります。<br>
+      またタイミングや位置をずらしてランダムにする箇所と揃える箇所を意識して使い分けることでメリハリのある表現になります。
+    </p>
+    <div id="stage10" class="stage">
+      <div class="center">
+        <div class="star"></div>
+      </div>
+    </div>
+
+    <h2>工夫例2:「ちょうどいい」ランダムさを意識的に作る</h2>
+    <p>
+      要素の数が十分に多くない場合、ランダムな割り付けは想像以上に偏りが大きくなります。<br>
+      この例では「ちょうどいいばらけ具合」を実現するために以下のテクニックを使用しています：
+    </p>
+    <ul>
+      <li>出現率表: 「レア」なものほど出現率が下がるよう、出現率のテーブルを使って制御します</li>
+      <li>基準値の周辺に偏った乱数: 基準値の周辺に多くの要素を集め、外れ値が少しだけになるように補正します</li>
+      <li>確率ではなく個数を決める: 先に個数を決めてしまい、どの要素を選ぶかだけをランダムにします</li>
+    </ul>
+    <div id="stage11" class="stage">
+      <div class="center">
+        <div class="star"></div>
+      </div>
+    </div>
+
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

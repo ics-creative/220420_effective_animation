@@ -1,11 +1,12 @@
-#app {
+body {
+  background-color: rgb(5, 20, 43);
+  color: #fff;
+  padding: 30px 10%;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
+
 
 * {
   box-sizing: border-box;
@@ -20,9 +21,9 @@
   width: 400px;
   height: 400px;
   position: relative;
-  border: 1px solid #ccc;
   cursor: pointer;
   overflow: hidden;
+  border: 1px solid #ffffff88;
   background-color: rgb(5, 20, 43);
   .center {
     position: relative;

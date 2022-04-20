@@ -62,7 +62,7 @@ const stage1emit = async () => {
   const animations1 = dots.map((dot, index) => {
     const angle = (360 / COUNT) * index;
     const distRandom = (Math.random() * Math.random()) ** 1.5 * (Math.random() < 0.5 ? -1 : 1)
-    const dist = 80 + distRandom * 50;
+    const dist = 100 + distRandom * 60;
     const isBig = bigDots.includes(dot);
     const size = isBig ? 2 + Math.random() * 2 : 0.5 + Math.random();
     const color = randomColor();
@@ -94,8 +94,8 @@ const stage1emit = async () => {
         }
       ],
       {
-        duration: dist * 4,
-        delay: 300 * Math.random(),
+        duration: dist * 3,
+        delay: 200 * Math.random(),
         fill: "forwards"
       }
     );

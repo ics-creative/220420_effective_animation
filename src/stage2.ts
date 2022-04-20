@@ -31,7 +31,7 @@ const emitParticles = async () => {
 
   const animations = dots.map((dot) => {
     const angle = 360 * Math.random();
-    const dist = 100 + 50 * Math.random();
+    const dist = 100 + Math.random() * 50;
     const size = 0.5 + Math.random() * 2;
     const hue = 30 + Math.random() * 25;
     dot.style.backgroundColor = `hsl(${hue}, 90%, 60%)`;
